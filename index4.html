@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <style>
+
+            body {
+                margin: 0;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                background: #efefef;
+            }
+
+            .parallax {
+                background-image: url("dress.jpg");
+                height: max-content;
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            .container {
+                margin: 50px 50px 50px 5%;
+                width: 90%;
+                text-align: center;
+            }
+
+            .categories, .items {
+                width: max-content;
+                margin: 25px;
+                border: 1px solid powderblue;
+                border-radius: 0 0 50px 50px;
+                display: inline-block;  
+            }
+
+            .categories:hover, .items:hover {
+                box-shadow: 0 0 10px 3px powderblue;
+            }
+
+            .item-image {
+                height: 200px;
+                width: 200px;
+                border-radius: 0 0 50px 50px;
+                padding: 10px;
+                font-weight: bold;
+            }
+
+            .item-title {
+                text-align: center;
+                text-transform: uppercase;
+                padding: 10px;
+            }
+
+            .image-title {
+                font-weight: bold;
+                color: black;
+            }
+
+            .title {
+                padding: 50px;
+                font-size: 50px;
+                font-weight: bold;
+                letter-spacing: 10px;
+                color: white;
+                background-color: rgba(0,0,0,0.5);
+            }
+
+            .gallery {
+                height: 65vh;
+                padding: 50px;
+                background: #efefef;
+                position: relative;
+            }
+
+            .images {
+                display: inline-block;
+            }
+
+            .item-image-size {
+                height: 100px;
+                width: 200px;
+                padding: 5px;
+            }
+
+            .description {
+                margin: 20px;
+                min-height: 100px;
+            }
+
+            .item-select {
+                margin: 10px 0 0 0;
+            }
+
+            .ordernow-btn {
+                border: 1px solid lightslategrey;
+                background: silver;
+                padding: 5px 15px;
+                border-radius: 15px;
+                font-weight: bold;
+                margin-top: 10px;
+                color: black;
+            }
+
+            .ordernow-btn:hover {
+                border-radius: 1px solid lightblue;
+                box-shadow: 0 0 10px 5px transparent inset;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+    <div class="container" id="gallery">
+        <div class="parallax">
+            <div class="title">Household Items</div>
+        </div>
+        <div class="items">
+            <div class="images">
+                <img src="toiletset.jpg" class="item-image-size"/>
+            <div class="description">
+                <b>Toilet Set</b><br/>
+                <div class="item-select">
+                    Price : R100
+                </div>
+                <form action="https://wa.link/udvj0h">
+                <label for="color">Color :</label>
+                <select name="color" id="color" required>
+                    <option value="">Select</option>
+                    <option value="">Pink</option>
+                    <option value="">Red</option>
+                    <option value="">Black</option>
+                    <option value="">White</option>
+                </select><br/>
+                <a href="https://wa.link/udvj0h"><button class="ordernow-btn">Order Now</button></a>
+                </form>
+            </div>
+            </div>
+        </div>
+        <div class="items">
+            <div class="images">
+                <img src="rugs.jpg" class="item-image-size"/>
+            <div class="description">
+                <b>Rugs</b><br/>
+                <div class="item-select">
+                    Price : R400
+                </div>
+                <form action="https://wa.link/udvj0h">
+                <label for="color">Color :</label>
+                <select name="color" id="color" required>
+                    <option value="">Select</option>
+                    <option value="">Light Blue</option>
+                    <option value="">Red</option>
+                    <option value="">Black</option>
+                    <option value="">Royal Blue</option>
+                    <option value="">Navy</option>
+                    <option value="">White</option>
+                    <option value="">Brown</option>
+                    <option value="">Light Brown</option>
+                    <option value="">Purple</option>
+                </select><br/>
+                <a href="https://wa.link/udvj0h"><button class="ordernow-btn">Order Now</button></a>
+                </form>
+            </div>
+            </div>
+        </div>
+            </div>
+        </div>
+        <br/><br/>
+        <br/><br/>
+        <a href="index1.html"><img src="left.png"/></a>
+        
+    </body>
+</html>

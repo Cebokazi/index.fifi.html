@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Acme&family=Lobster+Two:wght@700&display=swap" rel="stylesheet">
+
+
+
+        <style>
+
+            body {
+                margin: 0;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+
+            .parallax {
+                background-image: url("dress.jpg");
+                height: max-content;
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            .page-title {
+                background: rgbs (0,0,0,0.5);
+                text-align: center;
+                color: white;
+                padding: 50px;
+                font-variant: small-caps;
+                font-size: 100px;
+                font-family: acme;
+                letter-spacing: 20px;
+            }
+
+            .sticky {
+               position: fixed;
+                top: 0;
+                width: 100%;
+            }
+
+            .menu {
+                background: lightsteelblue;
+                text-align: center;
+            }
+
+            .menu-ul {
+                margin: 0;
+                padding: 0;
+                display: inline;
+            }
+
+            .menu-ul li {
+                font-size: 17px;
+                list-style: none;
+                display: inline-block;
+                padding: 25px 26px 25px;
+            }
+
+            .a-menu {
+                text-decoration: none;
+                color: white;
+                text-transform: uppercase;
+            }
+
+            .menu-ul li:hover {
+                background: transparent;
+                transform: scale(1.1);
+            }
+
+            i {
+                font-size: 20px;
+                margin: 0 10px 0 0;
+            }
+
+            button {
+                background: transparent;
+                border: none;
+                outline: none;
+            }
+
+            .container, .combo-container {
+                margin: 50px 50px 50px 5%;
+                width: 90%;
+                text-align: center;
+            }
+
+            .categories, .items {
+                width: max-content;
+                margin: 25px;
+                border: 1px solid powderblue;
+                border-radius: 0 0 50px 50px;
+                display: inline-block;  
+            }
+
+            .categories:hover, .items:hover {
+                box-shadow: 0 0 10px 3px powderblue;
+            }
+
+            .item-image {
+                height: 200px;
+                width: 200px;
+                border-radius: 0 0 50px 50px;
+                padding: 10px;
+                font-weight: bold;
+            }
+
+            .item-title {
+                text-align: center;
+                text-transform: uppercase;
+                padding: 10px;
+            }
+
+            .image-title {
+                font-weight: bold;
+                color: black;
+            }
+
+            a {
+                text-decoration: none;
+                color: black;
+            }
+
+            .title {
+                padding: 50px;
+                font-size: 50px;
+                font-weight: bold;
+                letter-spacing: 10px;
+                color: white;
+                background-color: rgba(0,0,0,0.5);
+            }
+
+            .combo {
+                padding: 50px;
+                font-size: 20px;
+                font-weight: bold;
+                color: black;
+                display: inline-block;
+                margin: 20px;
+                max-width: 15%;
+                background-image: url("pink.jpg");
+            }
+
+            .combo:hover {
+                background: transparent;
+                transform: scale(1.1);
+            }
+
+            .about {
+
+                height: 65vh;
+                padding: 50px;
+                background: #efefef;
+                position: relative;
+            }
+
+            .feature {
+                flex-basis: 50%;
+            }
+
+            .features h1 {
+                text-align: left;
+                margin-bottom: 10px;
+                font-weight: 100;
+                color: gray;
+                text-align: center;
+            }
+
+            .feature-text {
+                padding: 0.2;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                font-weight: bold;
+                color: black;
+                text-align: center;
+            }
+
+            .title {
+                text-align: center;
+                text-transform: uppercase;
+            }
+
+            .gallery {
+                height: 65vh;
+                padding: 50px;
+                background: #efefef;
+                position: relative;
+            }
+
+            .images {
+                display: inline-block;
+            }
+
+            .item-image-size {
+                height: 100px;
+                width: 200px;
+                padding: 5px;
+            }
+
+            .description {
+                margin: 20px;
+                min-height: 100px;
+            }
+
+            .item-select {
+                margin: 10px 0 0 0;
+            }
+
+            .contact {
+                height: 65vh;
+                padding: 50px;
+                background: #efefef;
+                position: relative;
+            }
+
+            h3 {
+                text-decoration: underline;
+            }
+
+            .footer {
+                font-weight: bold;
+            }
+            
+            .footer-bottom {
+                text-align: center;
+                padding-top: 50px;
+            }
+
+            .copyright-text {
+                font-weight: bold;
+            }
+
+            .socials a {
+                background-color: lightsteelblue;
+                width: 40px;
+                height: 40px;
+                display: inline-block;
+                margin-right: 10px;
+            }
+
+            .socials a i {
+                color: #e7f2f4;
+                padding: 10px 12px;
+                font-size: 20px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+
+        <div class="parallax">
+            <div class="page-title">Fifi The Runner</div>
+        </div>
+        <div class="menu" id="sticky">
+            <ul class="menu-ul">
+                <a href="#" class="a-menu"><li>Home</li></a>
+                <a href="#about" class="a-menu"><li>About</li></a>
+                <a href="#gallery" class="a-menu"><li>Gallery</li></a>
+                <a href="#contact" class="a-menu"><li>Contact</li></a>
+            </ul>
+        </div>
+
+        <script>
+            function stickyMenu () {
+                var sticky=document.getElementById ('sticky');
+                if (window.pageYOffset > 220) {
+                    sticky.classList.add('sticky');
+                }
+
+                else {
+                    sticky.classList.remove('sticky');
+                }
+            }
+
+            window.onscroll = function () {
+                stickyMenu ();
+            }
+
+        </script>
+
+        <div class="container" id="home">
+            <a href="index2.html">
+                <div class="categories">
+                    <img src="red.jpg" class="item-image"/>
+                    <div class="image-title">Clothes</div>
+                </div>
+            </a>
+            <a href="index3.html">
+                <div class="categories">
+                    <img src="accessories.jpg" class="item-image"/>
+                    <div class="image-title">Accessories</div>
+                </div>
+            </a>
+            <a href="index4.html">
+                <div class="categories">
+                    <img src="rugs.jpg" class="item-image"/>
+                    <div class="image-title">Household Items</div>
+                </div>
+            </a>
+            <h3>Fifi The Runner</h3>
+        </div>
+
+            <div class="combo-container" id="combo">
+                <div class="parallax">
+                    <div class="title">Deals</div>
+                </div>
+                <div class="combo">
+                    Combo deals are available at the price of one!
+                </div>
+                <div class="combo">
+                    Free deliveries for customers around Zeerust.
+                </div>
+                <div class="combo">
+                    Shipping done via Paxi for customers outside Zeerust.
+                </div>
+            </div>
+       
+    <div class="container" id="about">
+            <div class="parallax">
+                <div class="title">About</div>
+            </div>
+            <div class="features">
+                <h1>Fifi The Runner</h1>
+                    <div class="feature-text">
+                        <p>Fifi The Runner is a small business platform whereby it sells fashion trends; for men, women and kids, as well as household items/goods. In this way, Fifi helps by saving time and sometimes money for fashion lovers in going to shopping centers and waiting in long lines to purchase their goods. </p>
+                        <p>Another thing is, we're living in covic times where crowded spaces are limited, so instead of working yourself call your favourite runner for the best deals</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="gallery">
+        <div class="parallax">
+            <div class="title">Gallery</div>
+        </div>
+        <div class="items">
+            <div class="images">
+                <img src="rugs.jpg" class="item-image-size"/>
+            <div class="description">
+                <b>Rugs</b><br/>
+            </div>
+            </div>
+        </div>
+        <div class="items">
+            <div class="images">
+                <img src="bags1.jpg" class="item-image-size"/>
+            <div class="description">
+                <b>Bags</b><br/>
+            </div>
+            </div>
+        </div>
+        <div class="items">
+            <div class="images">
+                <img src="belt.jpg" class="item-image-size"/>
+            <div class="description">
+                <b>Belly Belts</b><br/>
+            </div>
+            </div>
+        </div>
+        <div class="items">
+            <div class="images">
+                <img src="colordress.jpg" class="item-image-size"/>
+            <div class="description">
+                <b>Dresses in multiple colors</b><br/>
+            </div>
+            </div>
+        </div>
+        <div class="items">
+            <div class="images">
+                <img src="burner.jpg" class="item-image-size"/>
+            <div class="description">
+                <b>Belly Burners</b><br/>
+            </div>
+            </div>
+        </div>
+        <div class="items">
+            <div class="images">
+                <img src="bags2.jpg" class="item-image-size"/>
+            <div class="description">
+                <b>Trendy Bags</b><br/>
+            </div>
+            </div>
+        </div>
+        <div class="items">
+            <div class="images">
+                <img src="bagset.jpg" class="item-image-size"/>
+            <div class="description">
+                <b>Bag, Mask and Accessories set </b><br/>
+            </div>
+            </div>
+        </div>
+        <div class="items">
+            <div class="images">
+                <img src="toiletset.jpg" class="item-image-size"/>
+            <div class="description">
+                <b>Toilet Set</b><br/>
+            </div>
+            </div>
+        </div>
+        <div class="items">
+            <div class="images">
+                <img src="tshirts.jpg" class="item-image-size"/>
+            <div class="description">
+                <b>Trendy Character Tees</b><br/>
+            </div>
+            </div>
+        </div>
+        <div class="items">
+            <div class="images">
+                <img src="laptop.jpg" class="item-image-size"/>
+            <div class="description">
+                <b>Laptop Bags</b><br/>
+            </div>
+            </div>
+        </div>
+        <div class="items">
+            <div class="images">
+                <img src="colors.jpg" class="item-image-size"/>
+            <div class="description">
+                <b>One Color Dress</b><br/>
+            </div>
+            </div>
+        </div>
+        <div class="items">
+            <div class="images">
+                <img src="coats.jpg" class="item-image-size"/>
+            <div class="description">
+                <b>Coats</b><br/>
+            </div>
+            </div>
+        </div>
+        <div class="items">
+            <div class="images">
+                <img src="boots.jpg" class="item-image-size"/>
+            <div class="description">
+                <b>Unisex Boots</b><br/>
+            </div>
+            </div>
+        </div>
+        <div class="items">
+            <div class="images">
+                <img src="yellowdress.jpg" class="item-image-size"/>
+            <div class="description">
+                <b>Fifi's Dress</b><br/>
+            </div>
+            </div>
+        </div>
+        <div class="items">
+            <div class="images">
+                <img src="dresses.jpg" class="item-image-size"/>
+            <div class="description">
+                <b>Fashion Dresses</b><br/>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="contact">
+        <div class="parallax">
+            <div class="title">Contact</div>
+        </div>
+        <div class="footer">
+            <h3>Address</h3>
+            <p>Zeerust, Mafikeng</p>
+            <p>For directions or any inqueries call : +27 73 870 1172</p>
+        </div>
+        <div class="socials">
+            <a href="https://www.facebook.com/refiloemosiane.refiloe"><i class="fa fa-facebook"></i></a>
+            <a href="https://msng.link/o/?refiloe_mosiane=ig"><i class="fa fa-instagram"></i></a>
+            <a href="https://twitter.com/REFILOE_MOS"><i class="fa fa-twitter"></i></a>
+            <a href="https://wa.link/udvj0h"><i class="fa fa-whatsapp"></i></a>
+        </div>
+        <div class="footer-bottom">
+            <p class="copyright-text">&copy; 2021 Done by Cebokazi Makasi - All Rights Reserve</p>
+        </div>
+    </div>
+    </body>
+</html>

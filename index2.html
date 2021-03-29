@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <style>
+
+            body {
+                margin: 0;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                background: #efefef;
+            }
+
+            .parallax {
+                background-image: url("dress.jpg");
+                height: max-content;
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            .container {
+                margin: 50px 50px 50px 5%;
+                width: 90%;
+                text-align: center;
+            }
+
+            .categories, .items {
+                width: max-content;
+                margin: 25px;
+                border: 1px solid powderblue;
+                border-radius: 0 0 50px 50px;
+                display: inline-block;  
+            }
+
+            .categories:hover, .items:hover {
+                box-shadow: 0 0 10px 3px powderblue;
+            }
+
+            .item-image {
+                height: 200px;
+                width: 200px;
+                border-radius: 0 0 50px 50px;
+                padding: 10px;
+                font-weight: bold;
+            }
+
+            .item-title {
+                text-align: center;
+                text-transform: uppercase;
+                padding: 10px;
+            }
+
+            .image-title {
+                font-weight: bold;
+                color: black;
+            }
+
+            .title {
+                padding: 50px;
+                font-size: 50px;
+                font-weight: bold;
+                letter-spacing: 10px;
+                color: white;
+                background-color: rgba(0,0,0,0.5);
+            }
+
+            .gallery {
+                height: 65vh;
+                padding: 50px;
+                background: #efefef;
+                position: relative;
+            }
+
+            .images {
+                display: inline-block;
+            }
+
+            .item-image-size {
+                height: 100px;
+                width: 200px;
+                padding: 5px;
+            }
+
+            .description {
+                margin: 20px;
+                min-height: 100px;
+            }
+
+            .item-select {
+                margin: 10px 0 0 0;
+            }
+
+            .ordernow-btn {
+                border: 1px solid lightslategrey;
+                background: silver;
+                padding: 5px 15px;
+                border-radius: 15px;
+                font-weight: bold;
+                margin-top: 10px;
+                color: black;
+            }
+
+            .ordernow-btn:hover {
+                border-radius: 1px solid lightblue;
+                box-shadow: 0 0 10px 5px transparent inset;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+    <div class="container" id="gallery">
+        <div class="parallax">
+            <div class="title">Clothes</div>
+        </div>
+        <div class="items">
+            <div class="images">
+                <img src="Dresses.jpg" class="item-image-size"/>
+            <div class="description">
+                <b>Dresses</b><br/>
+                <div class="item-select">
+                    Price : R250
+                </div>
+                <form action="https://wa.link/udvj0h">
+                <label for="color">Color :</label>
+                <select name="color" id="color" required>
+                    <option value="">Select</option>
+                    <option value="">Floral Orange</option>
+                    <option value="">Pink</option>
+                    <option value="">Yellow</option>
+                    <option value="">Red</option>
+                </select><br/>
+                <a href="https://wa.link/udvj0h"><button class="ordernow-btn">Order Now</button></a>
+                </form>
+            </div>
+            </div>
+        </div>
+        <div class="items">
+            <div class="images">
+                <img src="colors.jpg" class="item-image-size"/>
+            <div class="description">
+                <b>Color Dresses</b><br/>
+                <div class="item-select">
+                    Price : R200
+                </div>
+                <form action="https://wa.link/udvj0h">
+                <label for="color">Color :</label>
+                <select name="color" id="color" required>
+                    <option value="">Select</option>
+                    <option value="">Orange</option>
+                    <option value="">Pink</option>
+                    <option value="">Red</option>
+                    <option value="">Light Blue</option>
+                    <option value="">Yellow</option>
+                    <option value="">Brown</option>
+                </select><br/>
+                <a href="https://wa.link/udvj0h"><button class="ordernow-btn">Order Now</button></a>
+                </form>
+            </div>
+            </div>
+        </div>
+        <div class="items">
+            <div class="images">
+                <img src="tshirts.jpg" class="item-image-size"/>
+            <div class="description">
+                <b>Tees Combo</b><br/>
+                <div class="item-select">
+                    Price : R200
+                </div>
+                <form action="https://wa.link/udvj0h">
+                <label for="color">Color :</label>
+                <select name="color" id="color" required>
+                    <option value="">Select</option>
+                    <option value="">Black</option>
+                    <option value="">Dusty Pink</option>
+                    <option value="">Red</option>
+                    <option value="">Light Blue</option>
+                    <option value="">Blue</option>
+                    <option>Yellow</option>
+                </select><br/>
+                <a href="https://wa.link/udvj0h"><button class="ordernow-btn">Order Now</button></a>
+                </form>
+            </div>
+            </div>
+        </div>
+        <div class="items">
+            <div class="images">
+                <img src="belt.jpg" class="item-image-size"/>
+            <div class="description">
+                <b>Belly Belts</b><br/>
+                <div class="item-select">
+                    Price : R160
+                </div>
+                <form action="https://wa.link/udvj0h">
+                <label for="color">Color :</label>
+                <select name="color" id="color" required>
+                    <option value="">Select</option>
+                    <option value="">Black</option>
+                    <option value="">Navy</option>
+                </select><br/>
+                <a href="https://wa.link/udvj0h"><button class="ordernow-btn">Order Now</button></a>
+            </form>
+            </div>
+            </div>
+        </div>
+        <div class="items">
+            <div class="images">
+                <img src="silky.jpg" class="item-image-size"/>
+            <div class="description">
+                <b>Silky Dresses</b><br/>
+                <div class="item-select">
+                    Price : R280
+                </div>
+                <form action="https://wa.link/udvj0h">
+                <label for="color">Color :</label>
+                <select name="color" id="color" required>
+                    <option value="">Select</option>
+                    <option value="">Black</option>
+                    <option value="">Dusty Pink</option>
+                    <option value="">Red</option>
+                    <option value="">Light Blue</option>
+                    <option value="">Blue</option>
+                    <option value="">Yellow</option>
+                    <option value="">Orange</option>
+                    <option value="">Pink</option>
+                    <option value="">Green</option>
+                    <option value="">Turquise Blue</option>
+                </select><br/>
+                <a href="https://wa.link/udvj0h"><button class="ordernow-btn">Order Now</button></a>
+                </form>
+            </div>
+            </div>
+        </div>
+        
+        <div class="items">
+            <div class="images">
+                <img src="coats.jpg" class="item-image-size"/>
+            <div class="description">
+                <b>Coats</b><br/>
+                <div class="item-select">
+                    Price : R350
+                </div>
+                <form action="https://wa.link/udvj0h">
+                <label for="color">Color :</label>
+                <select name="color" id="color" required>
+                    <option value="">Select</option>
+                    <option value="">Black</option>
+                    <option value="">Baby Pink</option>
+                    <option value="">Light Brown</option>
+                    <option value="">Beige</option>
+                    <option value="">Orange</option>
+                    <option value="">Brown</option>
+                </select><br/>
+                <a href="https://wa.link/udvj0h"><button class="ordernow-btn">Order Now</button></a>
+                </form>
+            </div>
+            </div>
+        </div>
+        <div class="items">
+            <div class="images">
+                <img src="boots.jpg" class="item-image-size"/>
+            <div class="description">
+                <b>Boots</b><br/>
+                <div class="item-select">
+                    Price : R400
+                </div>
+                <form action="https://wa.link/udvj0h">
+                <label for="color">Color :</label>
+                <select name="color" id="color" required>
+                    <option value="">Select</option>
+                    <option value="">Black</option>
+                    <option value="">Red</option>
+                    <option value="">Masturd/Yellow</option>
+                </select><br/>
+                <a href="https://wa.link/udvj0h"><button class="ordernow-btn">Order Now</button></a>
+            </div>
+            </div>
+        </div>
+        <br/><br/>
+        <a href="index1.html"><img src="left.png"/></a>
+        
+    </body>
+</html>
